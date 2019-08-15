@@ -8,7 +8,7 @@ export const getData = () => {
     return dispatch => {
         dispatch({ type: FETCH_PLAYER_DATA_START });
         axios
-            .get('https://www.balldontlie.io/api/v1/players/')
+            .get('https://www.balldontlie.io/api/v1/players/5555')
             .then(res => {
                 console.log('res', res)
                 dispatch({ type: FETCH_PLAYER_DATA_SUCCESS, payload: res.data.data })

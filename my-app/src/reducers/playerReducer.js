@@ -28,7 +28,9 @@ switch (action.type) {
             }
         case FETCH_PLAYER_DATA_FAILURE:
             return {
-                error: ''
+                ...state,
+                isLoading: false,
+                error: '404'
             }
     default: 
         return state;

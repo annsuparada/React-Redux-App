@@ -21,7 +21,9 @@ const PlayerList = props => {
             /> ):(
             'See Players'
             )}
+            
         </button>
+        {props.error && <p className="error">{props.error}</p>}
         {props.players && props.players.map(item => 
             <Player key={item.first_name} player={item}/>
         )}
@@ -33,6 +35,7 @@ const mapStateToProps = state => {
     return {
       isLoading: state.isLoading,
       players: state.players,
+      error: state.error
     };
   };
 export default connect(mapStateToProps,
