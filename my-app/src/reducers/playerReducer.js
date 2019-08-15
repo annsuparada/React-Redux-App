@@ -9,7 +9,6 @@ const initialState = {
     players : [],
     isLoading: false,
     error: '',
-    test: 'This is a test'
 }
 
 export const reducer = (state = initialState, action) => {
@@ -25,6 +24,10 @@ switch (action.type) {
                 ...state,
                 players: action.payload,
                 isLoading: false,
+                error: ''
+            }
+        case FETCH_PLAYER_DATA_FAILURE:
+            return {
                 error: ''
             }
     default: 

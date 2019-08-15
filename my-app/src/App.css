@@ -13,3 +13,10 @@
   color: white;
 }
 
+.player{
+  padding: 1 rem;
+  border: 1px solid black;
+  width: 33%;
+  margin: 1rem auto;
+}
+
