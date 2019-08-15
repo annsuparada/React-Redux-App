@@ -1,6 +1,6 @@
 const initialState = {
     players : [],
-    isLoading: false,
+    isLoading: true,
     test: 'This is a test'
 }
 
