@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Player = props => {
+    console.log('props', props)
     return (
         <div>
-            <h1>{props.player}</h1>
+            <h1>{props.player.first_name}</h1>
         </div>
     )
         

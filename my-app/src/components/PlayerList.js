@@ -7,22 +7,23 @@ import Loader from 'react-loader-spinner'
 import Player from './Player'
 
 const PlayerList = props => {
+    console.log(props)
     return(
         <>
-        <h1>{props.test}</h1>
+        
         <button onClick={props.getData}>
-            {props.isLoading ? 
+            {props.isLoading ? (
                 <Loader
                     type="TailSpin"
                     color="#00BFFF"
                     height="100"
                     width="100"
-            /> :
+            /> ):(
             'See Players'
-            }
+            )}
         </button>
         {props.players && props.players.map(item => 
-            <Player key={item.name} player={item}/>
+            <Player key={item.first_name} player={item}/>
         )}
         </>
     )
@@ -30,7 +31,6 @@ const PlayerList = props => {
 } 
 const mapStateToProps = state => {
     return {
-      test: state.test,
       isLoading: state.isLoading,
       players: state.players,
     };

@@ -20,6 +20,13 @@ switch (action.type) {
             isLoading: true,
             error: ''
         }
+        case FETCH_PLAYER_DATA_SUCCESS:
+            return {
+                ...state,
+                players: action.payload,
+                isLoading: false,
+                error: ''
+            }
     default: 
         return state;
 }
