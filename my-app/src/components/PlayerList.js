@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 import { getData } from '../actions'
 import Loader from 'react-loader-spinner'
 
+
 import Player from './Player'
 
 const PlayerList = props => {
     return(
         <>
         <h1>{props.test}</h1>
-        <button>
+        <button onClick={props.getData}>
             {props.isLoading ? 
                 <Loader
                     type="TailSpin"
@@ -20,7 +21,7 @@ const PlayerList = props => {
             'See Players'
             }
         </button>
-        {props.players.map(item => 
+        {props.players && props.players.map(item => 
             <Player key={item.name} player={item}/>
         )}
         </>
