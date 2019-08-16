@@ -11,7 +11,7 @@ const PlayerList = props => {
     return(
         <>
         
-        <button onClick={props.getData}>
+        <button className="btn" onClick={props.getData}>
             {props.isLoading ? (
                 <Loader
                     type="TailSpin"

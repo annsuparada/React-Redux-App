@@ -30,7 +30,8 @@ switch (action.type) {
             return {
                 ...state,
                 isLoading: false,
-                error: '404'
+                // players: null,
+                error: 'The API is down. Please try again later'
             }
     default: 
         return state;
